@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+</head>
+<!-- //////////////////////////////////////////////// -->
+
+<body>
+    <div class="header-top center">
+        <div class="logo">
+            <img src="img/Logo.png" alt="photo" width="177px" height="50px" />
+        </div>
+        <div class="header">
+            <p>Home</p>
+            <p>Project</p>
+            <p>Blog</p>
+        </div>
+    </div>
+    <!-- ////////////////////////////////////////////////////// -->
+    <div class="index1-top-photo">
+        <img src="img/Image_laceholder.png" alt="photo">
+        <div class="index1-top-div">
+            <div class="p1">Articles & News</div><br>
+            <div class="p2">Home / Blog</div>
+        </div>
+        <!-- /////////////////////////////////////////////////////// -->
+        <div class="middle-h1">Latest Post</div>
+        <div class="index1-middle">
+
+            <img src="img/Image_laceholder1.png" alt="photo">
+            <div class="middle-art">
+                <h2>Low Cost Latest Invented Interior<br> Designing Ideas</h2>
+                <p>Lorem ipsum dolor sit amet, adipiscing Aliquam<br> eu sem vitae turpis dignissim maximus.posuere<br>
+                    in.Contrary
+                    to popular belief.
+                    <br><br>
+                    Lorem Ipsum is not simply random text. It has roots in a piece of classica.
+                </p>
+                <br>
+                <div class="p1">26 December,2022 </div>
+                <img src="img/str.png" alt="photo">
+            </div>
+        </div>
+    </div>
+    <!-- ////////////////////////////////////////////////////////////////////// -->
+    <div class="middle-second-h2">Articles & News</div>
+    <div class="middle-articles center" id="app">
+
+        <div class="middle-articles-grid" v-for="article in articles" :key="article.id">
+            <img :src="article.image" alt="photo" width="300" height="289">
+            <h4>{{article.art}}</h4>
+            <p>26 December,2022 </p>
+            <img src="img/str.png" alt="photo" class="middle-articles-grid-img">
+
+        </div>
+    </div>
+    <!-- /////////////////////////////////////////////////////// -->
+    <div class="pagination center">
+        <img src="img/Pagination.png" alt="photo">
+    </div>
+    <!-- ///////////////////////////////////////////////////////////// -->
+    <div class="footer center">
+        <div class="footer_1">
+            <div class="footer-logo">
+                <img src="img/Logo.png" alt="photo" width="177px" height="50px" />
+            </div>
+            <p>
+                It is a long established fact that a reader will be distracted
+                lookings.
+            </p>
+            <div class="social">
+                <img src="img/tw.png" alt="photo" />
+                <img src="img/in.png" alt="photo" />
+            </div>
+        </div>
+        <div class="footer_2">
+            <h4>Pages</h4>
+            <div class="footer-p-1">Home</div>
+            <div class="footer-p-2">Project</div>
+            <div class="footer-p-3">Blog</div>
+        </div>
+        <div class="footer_3">
+            <h4>Contact</h4>
+            <p>55 East Birchwood Ave. Brooklyn, New York 11201</p>
+            <p>contact@interno.com</p>
+            <p>(123) 456 - 7890</p>
+        </div>
+    </div>
+    <!-- ///////////////////////////////////////////////////////////////////////// -->
+    <script src="https://unpkg.com/vue@next"></script>
+    <script>Vue.createApp({
+            data() {
+                return {
+                    articles: [
+                        { id: 1, image: "img/image_7.png", art: 'Let’s Get Solution For Building Construction Work' },
+                        { id: 2, image: 'img/image_8.png', art: 'Low Cost Latest Invented Interior Designing Ideas.' },
+                        { id: 3, image: 'img/image_9.png', art: 'Best For Any Office & Business Interior Solution' },
+                        { id: 4, image: 'img/image_10.png', art: 'Let’s Get Solution For Building Construction Work' },
+                        { id: 5, image: 'img/image_11.png', art: 'Low Cost Latest Invented Interior Designing Ideas.' },
+                        { id: 6, image: 'img/image_12.png', art: 'Best For Any Office & Business Interior Solution' },
+                    ]
+                };
+            },
+        }).mount('#app');</script>
+</body>
+
+</html>
